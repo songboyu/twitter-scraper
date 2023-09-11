@@ -338,7 +338,7 @@ func (s *Scraper) LoginOpenAccount() error {
 	}
 
 	if info.Subtasks != nil && len(info.Subtasks) > 0 {
-		if info.Subtasks[0].SubtaskID == "OpenAccount" {
+		if info.Subtasks[0].SubtaskID == "OpenWelcomeFlowLink" {
 			s.oAuthToken = info.Subtasks[0].OpenAccount.OAuthToken
 			s.oAuthSecret = info.Subtasks[0].OpenAccount.OAuthTokenSecret
 			s.isLogged = true
